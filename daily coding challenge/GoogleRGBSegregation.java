@@ -14,7 +14,9 @@ public class GoogleRGBSegregation{
 
     public String[] result(String[] arr){
 
-        
+        return "s";
+
+
 
     }
 
