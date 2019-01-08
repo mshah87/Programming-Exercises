@@ -10,15 +10,19 @@ For example, given the array ['G', 'B', 'R', 'R', 'B', 'R', 'G'], it should beco
 
 */
 
-public class GoogleRGBSegregation{
+public class GoogleRGBSegregation {
 
-    public String[] result(String[] arr){
+    public String[] result(String[] arr) {
+
+       int left = 0;
+       int right = arr.length - 1;
+       
+       while (true){
+
+       }
 
         return "s";
 
-
-
     }
-
 
 }
