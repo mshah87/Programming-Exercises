@@ -1,3 +1,4 @@
+
 /* 
 
 This problem was asked by Google.
@@ -10,18 +11,43 @@ For example, given the array ['G', 'B', 'R', 'R', 'B', 'R', 'G'], it should beco
 
 */
 
+import java.util.Arrays;
+
 public class GoogleRGBSegregation {
 
-    public String[] result(String[] arr) {
+    public static char[] result(char[] arr) {
 
-       int left = 0;
-       int right = arr.length - 1;
-       
-       while (true){
+        int l = 0;
+        int r = arr.length - 1;
+        char letter;
 
-       }
+        for (int i = 0; i < r;) {
+            if (arr[i] == 'R') {
 
-        return "s";
+                letter = arr[i]; // letter = 'R' now
+                arr[i] = arr[l]; // arr[i] = first char of arr
+                arr[l] = letter; // first index of arr is 'R'
+                l++; //move left pointer
+                i++; //iterate array 
+
+            } else if (arr[i] == 'B') {
+                letter = arr[i]; //letter = 'B' now
+                arr[i] = arr[r]; //arr[i] = last char of arr 
+                arr[r] = letter; //last char of arr is 'B'
+                r--; //move right pointer
+            } else {
+                i++;
+            }
+        }
+        return arr;
+
+    }
+
+    public static void main(String args[]) {
+
+        char[] rgb = { 'G', 'B', 'R', 'R', 'B', 'R', 'G' };
+
+        System.out.println(Arrays.toString(result(rgb)));
 
     }
 
