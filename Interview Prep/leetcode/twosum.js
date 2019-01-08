@@ -1,4 +1,4 @@
-//#1
+//#1- easy 
 
 var twoSum = function(nums, target) {
     
