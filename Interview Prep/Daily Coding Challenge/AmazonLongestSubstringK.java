@@ -7,4 +7,7 @@
 
 public class AmazonLongestSubstringK{
     
+    public static int LongestSubstr(String str){
+        return 2;
+    }
 }
