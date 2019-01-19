@@ -8,3 +8,10 @@ same color using at most k colors.
 
 */
 
+public class GoogleAdjMatrixColor{
+
+    public static Node AdjMatrixColor(Node vertex){
+        
+    }
+}
+
