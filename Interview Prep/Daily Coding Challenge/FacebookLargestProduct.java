@@ -31,9 +31,7 @@ public class FacebookLargestProduct{
 
     public static void main (String args[]){
         int[] numbers = {-10,-10,5,2};
-
-        int maxproduct = numbers.LargestProduct(numbers);
-
-        System.out.println(maxproduct);
+        
+        System.out.println(LargestProduct(numbers));
     }
 }
