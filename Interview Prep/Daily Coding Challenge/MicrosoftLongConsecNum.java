@@ -15,8 +15,8 @@ Your algorithm should run in O(n) complexity.
 //Space: O(1), sorting it in place
 
 //METHOD 2: Hashset
-//Time complexity: O(n)
-//Space: O(n), uses set as storage 
+//Time complexity: O(n), nested loops run O(n + n)
+//Space: O(n), uses set to store O(n) nums
 
 public class MicrosoftLongConsecNum {
 
