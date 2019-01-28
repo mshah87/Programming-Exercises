@@ -41,17 +41,24 @@ public class MicrosoftLongConsecNum {
             int l = i - 1; 
             int r = i + 1; 
 
+            //check if set contains number that is 1 less than current number 
+            //if found, then remove from set and increase count
             while(set.contains(l)){
                count++;
                set.remove(l);
                l--; 
             }
 
+            //check if set contains number that is 1 more than current number 
+            //if found, then remove from set and increase count
             while(set.contains(r)){
                 count++;
                 set.remove(r);
                 r++;
             }
+
+            //get max of max and count 
+            //minimum can be 1 
             max = Math.max(max, count);
 
         }
