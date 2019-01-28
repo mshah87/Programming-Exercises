@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - MicrosoftLongConsecNum",
+            "request": "launch",
+            "mainClass": "MicrosoftLongConsecNum"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - GoogleRGBSegregation",
             "request": "launch",
             "mainClass": "GoogleRGBSegregation"
