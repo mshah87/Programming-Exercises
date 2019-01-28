@@ -14,7 +14,9 @@ Your algorithm should run in O(n) complexity.
 //Time complexity: O(nlogn, dominated by Arrays.sort()
 //Space: O(1), sorting it in place
 
-//METHOD 2: 
+//METHOD 2: Hashset
+//Time complexity: O(n)
+//Space: O(n), uses set as storage 
 
 public class MicrosoftLongConsecNum {
 
@@ -26,6 +28,7 @@ public class MicrosoftLongConsecNum {
         }
 
         HashSet<Integer> set = new HashSet<Integer>();
+        int max = 1;
 
         //add all numbers in array to the set
         for(int i: nums){
@@ -38,10 +41,30 @@ public class MicrosoftLongConsecNum {
             int l = i - 1; 
             int r = i + 1; 
 
+            while(set.contains(l)){
+               count++;
+               set.remove(l);
+               l--; 
+            }
+
+            while(set.contains(r)){
+                count++;
+                set.remove(r);
+                r++;
+            }
+            max = Math.max(max, count);
 
         }
 
-    
+        return max;
+
         
+    }
+
+    public static void main (String args[]){
+
+        int[] nums = {100, 4, 200, 1, 3, 2};
+
+        System.out.println(LongConsec(nums));
     }
 }
