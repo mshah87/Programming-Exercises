@@ -11,7 +11,7 @@ Your algorithm should run in O(n) complexity.
 */
 
 //METHOD 1: sort array then determine the sequence of consecutive numbers
-//Time complexity: O(nlogn, dominated by Arrays.sort()
+//Time complexity: O(nlogn), dominated by Arrays.sort()
 //Space: O(1), sorting it in place
 
 //METHOD 2: Hashset
