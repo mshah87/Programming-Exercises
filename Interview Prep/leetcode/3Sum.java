@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.HashSet;
 
 //#15 - medium
 
@@ -13,6 +14,12 @@ class Solution {
 
         //sort array
         Arrays.sort(nums);
+
+        //checks for duplicates 
+        HashSet<String> set = new HashSet<String>();
+
+
+
         
 
 
