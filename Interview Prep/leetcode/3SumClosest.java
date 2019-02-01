@@ -1,6 +1,5 @@
 //#16- medium
 
-
 /*
 
 Given array nums = [-1, 2, 1, -4], and target = 1.
