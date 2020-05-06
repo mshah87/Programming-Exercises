@@ -40,7 +40,7 @@ public class GoogleDeepestNode{
             if(temp.left!= null){
                 queue.add(temp.left);
             }
-            if(temp.left!=null){
+            if(temp.right!=null){
                 queue.add(temp.right);
             }
         }
