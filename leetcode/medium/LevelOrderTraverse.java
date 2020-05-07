@@ -34,7 +34,7 @@ class Solution {
                 level.add(temp.val);
                 
                 if(temp.left != null){
-                    queue.add  temp.left);
+                    queue.add(temp.left);
                 }
                 if(temp.right != null){
                     queue.add(temp.right);
