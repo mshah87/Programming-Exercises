@@ -1,5 +1,3 @@
-//#11- medium
-
 class Solution {
     public int maxArea(int[] height) {
 
@@ -16,6 +14,5 @@ class Solution {
             }
         }
         return maxArea;
-
     }
 }

@@ -29,7 +29,6 @@ class Solution {
     }
 }
 
-
 //Second method: hashmap + bucketsort + trie, O(N) complexity
 //store words and its freq in hashmap 
 //use bucketsort to store words

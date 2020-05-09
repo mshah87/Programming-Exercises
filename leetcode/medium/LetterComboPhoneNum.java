@@ -1,15 +1,6 @@
-//#17 - medium 
-
-//BFS METHOD
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList; 
-import java.util.Queue; 
-
 class Solution {
         public List<String> letterCombinations(String digits) {
-
+        //BFS METHOD
          ArrayList<String> result = new ArrayList<String>();
          if(digits == null || digits.length() == 0){
              return result;
@@ -54,34 +45,3 @@ class Solution {
 
         }
     }
-
-
-
-
-//DFS METHOD
-
-class Solution {
-
-    private HashMap<Character, String> map = new HashMap<Character, String>();   
-
-    public List<String> letterCombinations(String digits) {
-
-     ArrayList<String> result = new ArrayList<String>();
-     if(digits == null || digits.length() == 0){
-         return result;
-     }
-
-     map.put('2', "abc");
-     map.put('3', "def");
-     map.put('4', "ghi");
-     map.put('5', "jkl");
-     map.put('6', "mno");
-     map.put('7', "pqrs");
-     map.put('8', "tuv");
-     map.put('9', "wxyz");
-
-
-    }
-}
-
-

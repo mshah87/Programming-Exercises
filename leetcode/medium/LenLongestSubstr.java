@@ -1,31 +1,17 @@
-import java.util.HashSet;
-
-//#3- medium
-
-public class LenLongestSubstr {
-
-    public static int LongestSubstring(String str) {
-
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
         int i = 0;
-        int j=0;
+        int j = 0;
         int max = 0;
         HashSet<Character> set = new HashSet<Character>();
-        while (i < str.length()) {
-            if (!set.contains(str.charAt(i))) {
-                set.add(str.charAt(i++));
+        while (i < s.length()) {
+            if (!set.contains(s.charAt(i))) {
+                set.add(s.charAt(i++));
                 max = Math.max(max, set.size());
             } else {
-                set.remove(str.charAt(j++));
+                set.remove(s.charAt(j++));
             }
         }
-
         return max;
-
-    }
-
-    public static void main(String args[]) {
-
-        System.out.println(LongestSubstring("pwwkew"));
-
     }
 }
