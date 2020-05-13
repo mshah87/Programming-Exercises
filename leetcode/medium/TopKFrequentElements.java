@@ -26,8 +26,10 @@ class Solution {
         }
         return list.stream().mapToInt(Integer::intValue).toArray();
     }
+}
 
-    public int[] topKFrequentAgain(int[] nums, int k) {
+class Solution {
+    public int[] topKFrequent(int[] nums, int k) {
         //using hashmap and priority queue (minheap) method: 0(NlogK)
 
         //Minheap: O(NlogK) because we don't need to insert in heap N times, only K times.
