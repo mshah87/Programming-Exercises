@@ -7,8 +7,9 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
-class Solution { //BFS: O(V + E)
+class Solution { 
     public List<List<Integer>> levelOrder(TreeNode root) {
+        //BFS: O(V + E)
         
         List<List<Integer>> list = new ArrayList<List<Integer>>();
         List<Integer> level = new ArrayList<Integer>();
