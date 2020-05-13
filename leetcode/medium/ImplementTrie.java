@@ -10,6 +10,9 @@ class TrieNode {
 }
 
 class Trie {
+    //insert(): O(n)
+    //search(): O(n)
+    //startsWith(): O(n)
     private TrieNode root;
     
     /** Initialize your data structure here. */
