@@ -1,7 +1,7 @@
 class Solution {
     public int findMin(int[] nums) {
         //Binary search: O(logN) complexity
-        //The interval low - high will always change, in the end we return the low
+        //The interval low to high will always change, in the end we return the low
         int low = 0, high = nums.length-1;
         while(low<high){
             int mid = low + (high-low) / 2; //avoid overflow
