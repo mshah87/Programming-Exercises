@@ -1,12 +1,9 @@
 class Solution {
-    public int[] intersect(int[] nums1, int[] nums2) {
+    public int[] intersection(int[] nums1, int[] nums2) {
+        //O(n) complexity, each element in the result doesn't have to be unique
         HashMap<Integer,Integer> map = new HashMap<>();
         for(int i: nums1){
-            if(!map.containsKey(i)){
-                map.put(i,1);
-            } else {
-                map.put(i,map.get(i)+1);
-            }
+           map.put(i, map.getOrDefault(i, 0) + 1);
         }
         
         ArrayList<Integer> list = new ArrayList<>();
@@ -21,15 +18,38 @@ class Solution {
             } 
         }
         
-        int ans[] = new int[list.size()];
+        int[] ans = new int[list.size()];
         int j = 0;
         while(j<ans.length){
-            ans[j] = list.get(j);
-            j++;
+            ans[j++] = list.get(j);
+        }
+        return ans;
+    }
+}
+
+
+
+class Solution {
+    public int[] intersection(int[] nums1, int[] nums2) {
+        //O(n) complexity, each element in the result must be unique
+        Set<Integer> set = new HashSet<>();
+        Set<Integer> set2 = new HashSet<>(); //to maintain unique list   
+        
+        for(int i: nums1){
+           set.add(i);
         }
         
+        for(int k: nums2){
+            if(set.contains(k)){
+                set2.add(k);
+            }
+        }
+        
+        int[] ans = new int[set2.size()];
+        int j = 0;
+        for(int i: set2){
+            ans[j++] = i;
+        }
         return ans;
-        
-        
     }
 }

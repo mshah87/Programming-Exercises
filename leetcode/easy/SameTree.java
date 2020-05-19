@@ -22,7 +22,7 @@ class Solution { //Recursive: O(N)
     }
 }
 
-class Solution { //Iterative: O(N) 
+class Solution { //Iterative BFS: O(N) 
     public boolean isSameTree(TreeNode p, TreeNode q) {
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(p);

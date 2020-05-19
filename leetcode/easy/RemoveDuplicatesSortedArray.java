@@ -1,7 +1,6 @@
 class Solution {
     public int removeDuplicates(int[] nums) {
-        //[1,2,3,3] -> 3
-        
+        //[1,2,3,3] -> length = 3
         if(nums.length<2){
             return nums.length;
         }

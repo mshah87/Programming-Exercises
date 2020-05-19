@@ -13,22 +13,11 @@
  *     }
  * }
  */
-class Solution { //Recursive: trivial
-    public TreeNode invertTree(TreeNode root) {
-        if(root == null) return null;
-        TreeNode left = root.left;
-        TreeNode right = root.right;
-        root.left = invertTree(right);
-        root.right = invertTree(left);
-        return root;
-    }
-}
-
-class Solution { //BFS: O(V+E) complexity
-    public TreeNode invertTree(TreeNode root) {
+class Solution {
+    public TreeNode invertTree(TreeNode root) { //BFS: O(V+E) complexity
         if(root == null) return null;
         
-        Queue<TreeNode> queue = new Linkedlist<>();
+        Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
         
         while(!queue.isEmpty()){

@@ -10,7 +10,6 @@ class Solution {
                 return s.indexOf(r);
             }
         }
-        
         return -1;
     }
 }

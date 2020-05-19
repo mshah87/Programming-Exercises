@@ -10,8 +10,6 @@ class Solution {
                 return new int[] {map.get(temp), i};
             }
         }
-        
         return new int[] {-1};
-        
     }
 }
