@@ -1,5 +1,8 @@
 class Solution {
     public int eraseOverlapIntervals(int[][] intervals) {
+        //Input: [[1,2],[2,3],[3,4],[1,3]]
+        //Output: 1
+        //Explanation: [1,3] can be removed and the rest of intervals are non-overlapping.
         if(intervals == null || intervals.length == 0){
             return 0;
         }

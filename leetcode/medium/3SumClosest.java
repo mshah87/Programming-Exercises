@@ -14,7 +14,6 @@ class Solution {
         for(int i = 0 ; i < nums.length; i++){
             int start = i+1; 
             int end = nums.length - 1;
-
             while(start<end){
                 int sum = nums[i] + nums[start] + nums[end];
                 if(Math.abs(target-sum) < Math.abs(target-closestSum)){ //find the minimum difference 

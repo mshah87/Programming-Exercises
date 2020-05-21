@@ -10,7 +10,7 @@ class Solution {
          result.add("");
         
         for(int i=0; i<digits.length(); i++){
-            int index = Character.getNumericValue(digits.charAt(i));
+            int index = Character.getNumericValue(digits.charAt(i)); //numeric value of the char
             while(result.peek().length() == i){
                 String perm = result.remove();
                 for(char c: values[index].toCharArray()){

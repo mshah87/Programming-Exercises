@@ -6,11 +6,11 @@ class Solution {
         for(String s: strs){
             char[] ch = s.toCharArray();
             Arrays.sort(ch);
-            String key = new String(ch);
+            String key = new String(ch); // keys in hashmap are sorted
             if(!map.containsKey(key)){
                 map.put(key, new ArrayList<>());
             } 
-            map.get(key).add(s);
+            map.get(key).add(s); // add the unsorted string as value
         }
         return new ArrayList<>(map.values());
     }

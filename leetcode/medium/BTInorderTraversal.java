@@ -14,7 +14,7 @@
  * }
  */
 class Solution {
-    public List<Integer> inorderTraversal(TreeNode root) {
+    public List<Integer> inorderTraversal(TreeNode root) { //left, root, right
         //DFS 
         List<Integer> list = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();

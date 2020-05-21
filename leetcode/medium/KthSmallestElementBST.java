@@ -15,7 +15,7 @@
  */
 class Solution {
     public int kthSmallest(TreeNode root, int k) {
-        //use inorder DFS method
+        //use inorder DFS method: left, root, right
         Stack<TreeNode> stack = new Stack<>();
         while(root!=null || !stack.isEmpty()){
             while(root!=null) {

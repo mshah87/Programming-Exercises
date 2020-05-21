@@ -7,7 +7,7 @@ class Solution {
             return intervals;
         }
         
-        Arrays.sort(intervals, (a1, a2) -> Integer.compare(a1[0], a2[0]));
+        Arrays.sort(intervals, (a1, a2) -> Integer.compare(a1[0], a2[0])); // Sort by ascending starting point
         
         List<int[]> result = new ArrayList<>(); //we don't know the size of output array so we use a list
         int[] currentInterval = intervals[0];
