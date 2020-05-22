@@ -26,9 +26,7 @@ class Solution {
             high--;
           }
         }
-
       }
-      
     }
     return result.stream().mapToInt(Integer::intValue).toArray();
   }
