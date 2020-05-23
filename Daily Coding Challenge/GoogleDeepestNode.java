@@ -6,7 +6,7 @@ This problem was asked by Google.
 
 Given the root of a binary tree, return a deepest node. For example, in the following tree, return d.
 
-    a
+    ae
    / \
   b   c
  /
@@ -19,7 +19,7 @@ import java.util.Queue;
 
 public class GoogleDeepestNode{
 
-    public Node DeepestNode(){
+    public Node DeepestNode(Node root){
 
         if(root== null){
             return null;
@@ -44,8 +44,6 @@ public class GoogleDeepestNode{
                 queue.add(temp.right);
             }
         }
-
         return temp;
-
     }
 }

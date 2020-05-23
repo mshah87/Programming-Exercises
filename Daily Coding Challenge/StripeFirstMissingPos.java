@@ -14,10 +14,7 @@ public class StripeFirstMissingPos{
 
     public int firstMissingPositive(int[] nums) {
 
-        //solution 1
-
         int smallest = 1;
-
         HashSet<Integer> set = new HashSet<Integer>();
 
         if(nums.length == 0){
@@ -29,17 +26,11 @@ public class StripeFirstMissingPos{
             if(num[i]> 0){
                 set.add(nums[i]);
             }
-            
         }
 
         while(set.contains(smallest)){
              smallest++;
         }
         return smallest;
-
-        
     }
-
-
-
 }
