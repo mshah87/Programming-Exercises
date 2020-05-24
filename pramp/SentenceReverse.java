@@ -1,8 +1,16 @@
 import java.io.*;
 import java.util.*;
 
-class Solution {
+/* input:  arr = [ 'p', 'e', 'r', 'f', 'e', 'c', 't', '  ',
+'m', 'a', 'k', 'e', 's', '  ',
+'p', 'r', 'a', 'c', 't', 'i', 'c', 'e' ]
 
+output: [ 'p', 'r', 'a', 'c', 't', 'i', 'c', 'e', '  ',
+'m', 'a', 'k', 'e', 's', '  ',
+'p', 'e', 'r', 'f', 'e', 'c', 't' ]
+*/
+
+class Solution {
   static char[] reverseWords(char[] arr) {
     // O(n) complexity
     // [ "m", "a", "n", " ", "h", "e", "y"] -- reverse whole array first
