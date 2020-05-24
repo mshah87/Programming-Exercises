@@ -40,15 +40,10 @@ public class GoogleRGBSegregation {
             }
         }
         return arr;
-
     }
 
     public static void main(String args[]) {
-
         char[] rgb = { 'G', 'B', 'R', 'R', 'B', 'R', 'G' };
-
         System.out.println(Arrays.toString(result(rgb)));
-
     }
-
 }
