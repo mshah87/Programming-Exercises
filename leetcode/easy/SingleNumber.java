@@ -4,11 +4,10 @@ class Solution {
         for(int i: nums){
             map.put(i, map.getOrDefault(i, 0) + 1);
         }
-        
-        for ( Map.Entry<Integer,Integer> entry : map.entrySet()) {
-            int k = entry.getKey();
-            if (map.get(k) == 1) {
-                return k;
+          
+        for (int key : map.keySet()) {
+            if (map.get(key) == 1) {
+                return key;
             }
         }
         return -1;
