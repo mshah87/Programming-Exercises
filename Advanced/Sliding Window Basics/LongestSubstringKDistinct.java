@@ -18,5 +18,6 @@ class Solution {
             }
             maxLength = Math.max(maxLength, windowEnd - windowStart + 1); 
         }
+        return maxLength;
     }
 }
