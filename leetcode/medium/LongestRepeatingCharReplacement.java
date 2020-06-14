@@ -1,5 +1,5 @@
 class Solution {
-    public int characterReplacement(String s, int k) {
+    public int characterReplacement(String s, int k) { //Sliding window
         int[] count = new int[26];
         int start = 0; 
         int maxCount = 0;
