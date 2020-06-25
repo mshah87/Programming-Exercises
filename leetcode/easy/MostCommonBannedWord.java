@@ -1,5 +1,5 @@
 class Solution {
-    public String mostCommonWord(String paragraph, String[] banned) {
+    public String mostCommonWord(String paragraph, String[] banned) { // O(N) complexity, O(N) space
         String[] words = paragraph.toLowerCase().split("\\W+");
         
         Set<String> set = new HashSet<>();

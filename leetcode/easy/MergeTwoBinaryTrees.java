@@ -14,7 +14,7 @@
  * }
  */
 class Solution {
-    public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
+    public TreeNode mergeTrees(TreeNode t1, TreeNode t2) { // O(N) complexity
         if(t1==null && t2==null) return null;
         if(t1==null) return t2;
         if(t2==null ) return t1;

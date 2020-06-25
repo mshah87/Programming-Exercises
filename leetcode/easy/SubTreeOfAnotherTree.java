@@ -13,7 +13,7 @@
  *     }
  * }
  */
-class Solution { //O(n*m) complexity preorder traversal
+class Solution { //O(N*M) complexity, preorder traversal (root, left, right)
     public boolean isSubtree(TreeNode s, TreeNode t) {
         if(t==null) return true;
         if(s==null) return false;

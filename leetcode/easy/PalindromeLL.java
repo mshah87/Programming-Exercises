@@ -16,8 +16,8 @@ class Solution { // O(n) complexity, O(1) space
         ListNode fast = head;
         
         while(fast!=null && fast.next!=null){
-            slow=slow.next;
-            fast=fast.next.next;
+            slow=slow.next; // goes to the middle
+            fast=fast.next.next; //goes to the end
         }
         
         slow = reversed(slow);

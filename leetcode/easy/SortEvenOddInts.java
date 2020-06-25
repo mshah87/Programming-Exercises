@@ -1,6 +1,5 @@
 class Solution {
-    //O(n) Complexity
-    public int[] sortArrayByParity(int[] A) {
+    public int[] sortArrayByParity(int[] A) { // O(N) complexity
         int[] result = new int[A.length];
         int j = 0, k = A.length-1;
         for(int i = 0; i< A.length; i++){
