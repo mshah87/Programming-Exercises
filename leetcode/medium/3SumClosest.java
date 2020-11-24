@@ -11,7 +11,7 @@ class Solution {
         Arrays.sort(nums); //sort least to greatest
         int closestSum = nums[0] + nums[1] + nums [2];
 
-        for(int i = 0 ; i < nums.length; i++){
+        for(int i = 0 ; i < nums.length-2; i++){
             int start = i+1; 
             int end = nums.length - 1;
             while(start<end){
