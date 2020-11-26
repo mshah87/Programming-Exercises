@@ -29,8 +29,6 @@ class Solution {
     }
 }
 
-
-
 class Solution {
     public int missingNumber(int[] nums) {
         //If nums are already sorted O(logn) time O(1) space
