@@ -1,5 +1,19 @@
 class Solution {
     public int missingNumber(int[] nums) {
+        //O(n) time O(1) space
+        //0^a = a
+        //a^a = 0
+        //thus: indices 0 to n ^ actual nums in array -> gives odd one out
+        int xor = 0;
+        for(int i = 0; i<nums.length; i++){
+            xor = xor ^ nums[i] ^ i + 1;
+        }
+        return xor;
+    }
+}
+
+class Solution {
+    public int missingNumber(int[] nums) {
         //O(n) time O(n) space
         HashSet<Integer> set = new HashSet<>();
         for(int i: nums){
@@ -15,19 +29,7 @@ class Solution {
     }
 }
 
-class Solution {
-    public int missingNumber(int[] nums) {
-        //O(n) time O(1) space
-        //0^a = a
-        //a^a = 0
-        //thus: indices 0 to n ^ actual nums in array -> gives odd one out
-        int xor = 0;
-        for(int i = 0; i<nums.length; i++){
-            xor = xor ^ nums[i] ^ i + 1;
-        }
-        return xor;
-    }
-}
+
 
 class Solution {
     public int missingNumber(int[] nums) {
