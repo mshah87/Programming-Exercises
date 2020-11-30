@@ -7,7 +7,7 @@
  * }
  */
 class Solution {
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) { //O(n) time
         ListNode list = new ListNode(0);
         ListNode h = list;
         
