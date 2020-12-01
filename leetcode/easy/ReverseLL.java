@@ -7,7 +7,7 @@
  * }
  */
 class Solution {
-    public ListNode reverseList(ListNode head) {
+    public ListNode reverseList(ListNode head) { // O(n) time, O(1) space
         ListNode prev = null;
         ListNode curr = head; 
         while(curr!= null){
