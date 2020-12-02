@@ -28,7 +28,6 @@ class Solution {
             curr.next = new ListNode(minHeap.poll());
             curr = curr.next;
         }
-        
         return head.next;
     } 
 }
