@@ -4,41 +4,33 @@
  *     int val;
  *     TreeNode left;
  *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
  * }
  */
-class Solution { 
-    public List<List<Integer>> levelOrder(TreeNode root) {
-        //BFS: O(V + E)
-        
-        List<List<Integer>> list = new ArrayList<List<Integer>>();
-        List<Integer> level = new ArrayList<Integer>();
-        
-        Queue<TreeNode> curr = new LinkedList<TreeNode>();
-        Queue<TreeNode> next = new LinkedList<TreeNode>();
-        
-        if(root == null) return list;
-     
-        curr.offer(root);
-    
-        while(!curr.isEmpty()){
-            TreeNode temp = curr.poll();
-            if(temp.left != null){
-                next.offer(temp.left);
-            } 
-            if(temp.right != null){
-                next.offer(temp.right);
+class Solution {
+    public List<List<Integer>> levelOrder(TreeNode root) { // BFS: O(V+E) time
+        List<List<Integer>> result = new ArrayList<>();
+        if(root == null) return result;
+        Queue<TreeNode> q = new LinkedList<>();
+
+        q.offer(root);
+        while(!q.isEmpty()){
+            int size = q.size();
+            List<Integer> currLevel = new ArrayList<>();
+            for(int i = 0; i<size; i++){
+                TreeNode curr = q.poll();
+                currLevel.add(curr.val);
+                if(curr.left != null) q.offer(curr.left);
+                if(curr.right != null) q.offer(curr.right);
             }
-            
-            level.add(temp.val);
-            
-            if(curr.isEmpty()){
-                curr = next;
-                next = new LinkedList<TreeNode>(); 
-                list.add(level);
-                level = new ArrayList<Integer>();
-            } 
+            result.add(currLevel);
         }
-        return list;
+        return result;
     }
 }

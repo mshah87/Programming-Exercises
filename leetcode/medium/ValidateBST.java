@@ -8,20 +8,20 @@
  * }
  */
 class Solution {
-    public boolean isValidBST(TreeNode root) { // O(n) complexity, DFS inorder traversal (left, root, right)
-        if(root == null) return true;
-        Stack<TreeNode> stack = new Stack();
-        TreeNode previous = null;
-        while (!stack.isEmpty() || root != null) {
-          while (root != null) {
-            stack.push(root);
-            root = root.left;
+  public boolean isValidBST(TreeNode root) { // O(n) complexity, DFS inorder traversal (left, root, right)
+      if(root == null) return true;
+      Stack<TreeNode> stack = new Stack<>();
+      TreeNode leftChild = null;
+      while(!stack.isEmpty() || root != null){
+          while(root!=null){
+              stack.push(root); // every left node is pretty much a parent
+              root = root.left;
           }
           root = stack.pop();
-          if (previous != null && root.val <= previous.val) return false;
-          previous = root;
+          if(leftChild != null && root.val <= leftChild.val ) return false; // if parent less than leftchild
+          leftChild = root;
           root = root.right;
-        }
-        return true;
+      }
+      return true;
   }
 }
