@@ -1,5 +1,6 @@
 class Solution {
     public int[][] merge(int[][] intervals) {
+        // Sorting takes O(n log(n)) and merging the intervals takes O(n). So, the resulting algorithm takes O(n log(n)).
         //Input: [[1,3],[2,6],[8,10],[15,18]]
         //Output: [[1,6],[8,10],[15,18]]
         
