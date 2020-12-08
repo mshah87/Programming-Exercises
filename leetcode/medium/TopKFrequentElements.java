@@ -14,17 +14,16 @@ class Solution {
             if(bucket[freq] == null){
                 bucket[freq] = new ArrayList<>(); //only add arraylist in the bucket's index if there exists a frequency
             }
-            bucket[map.get(key)].add(key);
+            bucket[freq].add(key);
         }
         
-        List<Integer> list = new ArrayList<>();
-        for(int i=bucket.length - 1; i>=0; i--){
+        List<Integer> result = new ArrayList<>();
+        for(int i = bucket.length-1; i>=0 && result.size() < k; i--){
             if(bucket[i] != null){
-                list.addAll(bucket[i]);
-                if(list.size() >= k) break;
+                result.addAll(bucket[i]);
             }
         }
-        return list.stream().mapToInt(Integer::intValue).toArray();
+        return result.stream().mapToInt(Integer::intValue).toArray();
     }
 }
 
@@ -45,15 +44,15 @@ class Solution {
             map.put(i, map.getOrDefault(i, 0) + 1);
         }
         
-        PriorityQueue<Integer> minHeap = new PriorityQueue<>(k, Comparator.comparingInt(num -> map.get(num))); //sort based on value in map
-        
+        //sort based on value in map which is frequency
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>(k, Comparator.comparingInt(num -> map.get(num)));
+
         for(int num: map.keySet()){
             minHeap.offer(num);
-            if(minHeap.size() > k){
+            if(minHeap.size() > k){ //minheap will have at most k elements
                 minHeap.poll();
             }
         }
-        
         return minHeap.stream().mapToInt(Integer::intValue).toArray();
     }
 }
