@@ -1,5 +1,9 @@
 class MedianFinder {
     // O(log(n)) of add() and O(1) of getMedian()
+    //We can use two heaps to store the lower half and the higher half of the data stream. 
+    //The size of the two heaps differs at most 1.
+    // https://www.programcreek.com/2015/01/leetcode-find-median-from-data-stream-java/
+
     PriorityQueue<Integer> minHeap = new PriorityQueue<>();
     PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a,b) -> (b-a));
 
