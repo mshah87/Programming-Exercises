@@ -1,34 +1,35 @@
 class Solution {
-    public String minWindow(String s, String t) { // Sliding Window: O(N) complexity O(N) space
+    public String minWindow(String s, String t) { // O(n) time
         if(s.isEmpty() || t.length() > s.length()) return "";
-
+        
+        String res = "";
         int[] hash = new int[128];
-        int start = 0, minStart = 0, end = 0, minLen = Integer.MAX_VALUE, count = t.length();
+        int start = 0, count = 0, minLen = Integer.MAX_VALUE;
         
         for(char c: t.toCharArray()){
             hash[c]++;
         }
         
-        while(end < s.length()){
-            char ch = s.charAt(end);
-            if(hash[ch] > 0){ // if current character is present in t 
-                count--;
+        for(int end = 0; end<s.length(); end++){
+            if(hash[s.charAt(end)] > 0){ // if we found character in t
+                count++;
             }
-            hash[ch]--;
-            end++;
-            while(count == 0){
-                if(end - start < minLen){
-                    minLen = end - start;
-                    minStart = start;
+            hash[s.charAt(end)]--; // decrement since we saw it
+            
+            while(count == t.length()){ // the current window has all the chars from t
+                if(minLen > end - start + 1){
+                    minLen = end - start + 1; // update min length
+                    res = s.substring(start, end + 1); 
                 }
-                char ch2 = s.charAt(start);
-                hash[ch2]++; /// restore the character count in map
-                if(hash[ch2] > 0){
-                    count++;
+                
+                //now lets reduce window size
+                hash[s.charAt(start)]++; // discard left most char, restore it
+                if(hash[s.charAt(start)] > 0){ // it was one of chars in t we needed
+                    count--;
                 }
                 start++;
             }
         }
-        return minLen == Integer.MAX_VALUE ? "" : s.substring(minStart, minStart + minLen);
+        return res;
     }
 }
