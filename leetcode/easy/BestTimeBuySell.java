@@ -1,12 +1,13 @@
 class Solution {
     public int maxProfit(int[] prices) {
-        //profit = peak - valley
-        //if next day price is higher than previous day, add to maxprofit 
+        if(prices == null || prices.length == 0){
+            return 0;
+        }
         int max = 0;
-        for(int i = 1; i < prices.length; i++){
-            if(prices[i]>prices[i-1]){
-                max+=prices[i]-prices[i-1];
-            }
+        int min = Integer.MAX_VALUE;
+        for(int i = 0; i<prices.length; i++){
+            min = Math.min(min, prices[i]);
+            max = Math.max(max, prices[i] - min);
         }
         return max;
     }
