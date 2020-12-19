@@ -20,8 +20,8 @@ class Solution {
         // ((2^2)^(1^1)^(4^4)^(5)) => (0^0^0^5) => 5 
         // Picking odd one out
         int result = 0;
-        for (int i = 0; i<n; i++){
-            result ^=A[i];
+        for (int i = 0; i<nums.length; i++){
+            result ^=nums[i];
         }
         return result;
     }
