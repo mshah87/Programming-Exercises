@@ -20,8 +20,8 @@ class Solution { // O(n) complexity, O(1) space
             fast=fast.next.next; //goes to the end
         }
         
-        slow = reversed(slow);
-        fast = head;
+        slow = reversed(slow); // goes to head of reversed list (middle)
+        fast = head; // start of list
         while(slow!=null){
             if(slow.val != fast.val){
                 return false;
@@ -35,10 +35,10 @@ class Solution { // O(n) complexity, O(1) space
     public ListNode reversed(ListNode head){
         ListNode prev = null;
         while(head != null){
-            ListNode next = head.next;
+            ListNode temp = head.next;
             head.next = prev;
             prev = head;
-            head = next;
+            head = temp;
         }
         return prev;
     }
