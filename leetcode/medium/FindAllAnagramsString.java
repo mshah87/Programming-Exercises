@@ -23,7 +23,6 @@ class Solution {
             if(end - start == p.length()){
                 res.add(start);
             }
-            
         }
         return res;
     }
