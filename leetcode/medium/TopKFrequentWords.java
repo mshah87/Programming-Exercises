@@ -23,7 +23,8 @@ class Solution {
         
         List<String> list = new ArrayList<>();
         while(!minHeap.isEmpty()){
-            list.add(0, minHeap.poll());
+            // put 0 because we insert to beginning of list, as the heap is stored in reverse
+            list.add(0, minHeap.poll()); 
         }
         return list; 
     }

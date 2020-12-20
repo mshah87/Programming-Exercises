@@ -9,10 +9,10 @@ class Solution {
         minHeap.offer(intervals[0][1]);
         for(int i = 1; i<intervals.length; i++){
             if(intervals[i][0] >= minHeap.peek()){
-                minHeap.poll(); // no conflicts
+                minHeap.poll(); // no conflict, we can free this room for next intervals[i]
             }
             minHeap.offer(intervals[i][1]);
         }
-        return minHeap.size();
+        return minHeap.size(); // gives minimum number of rooms
     }
 }
