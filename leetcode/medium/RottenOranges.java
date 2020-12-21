@@ -1,6 +1,6 @@
 class Solution {
     public int orangesRotting(int[][] grid) {
-        Queue<int[]> rotten = new LinkedList();
+        Queue<int[]> rotten = new LinkedList<>();
         int r = grid.length, c = grid[0].length, fresh = 0, t = 0;
         for(int i = 0; i < r; ++i){
             for(int j = 0; j < c; ++j){
