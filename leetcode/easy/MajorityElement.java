@@ -21,5 +21,5 @@ class Solution {
 }
 
 // other methods 
-// 1.) sort and find elem that occurs > n/4 times
+// 1.) sort and find elem that occurs > n/2 times
 // 2.) hashmap
